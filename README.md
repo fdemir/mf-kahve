@@ -40,13 +40,15 @@ _See the following diagram for more details. Check the [spotify engineering cult
 
 <!-- imgk -->
 
-There are 4 teams that are responsible for the development of the feature they are assigned to.
+There are 5 teams that are responsible for the development of the feature they are assigned to.
 
 - **Search**: searching in the products
 - **List**: list of products that are available in the coffee shop
 - **Cart**: cart of the products that are selected by the user
-- **Composer**: composition of the microfrontends and common APIs
 - **Checkout**: checkout process.
+- **Core**: common APIs that are used by the microfrontends, cross cutting concerns, etc.
+
+- **Composer**: app shell that is responsible for the composition of the microfrontends and the routing between them.
 
 ### Tech Stack
 
@@ -105,6 +107,11 @@ Deployement is done with Docker and Kubernetes. Each microfrontend is deployed a
 ## CI/CD
 
 CI/CD is done with Github Actions. There are 2 workflows. The first workflow is triggered when a pull request is created. It runs the tests and builds the docker images. The second workflow is triggered when a pull request is merged to the master branch. It runs the tests, builds the docker images and pushes them to the docker registry. It also deploys the application to the kubernetes cluster.
+
+## Roadmap
+
+- Integrate the microfrontends with each other
+- Add testing
 
 ## References
 
