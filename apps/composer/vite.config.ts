@@ -11,7 +11,7 @@ export default defineConfig({
       remotes: {
         search: "http://localhost:5001/assets/remoteEntry.js",
       },
-      shared: ["react", "react-dom"],
+      shared: ["react", "react-dom", "@mf-kahve/ui"],
     }),
   ],
 });

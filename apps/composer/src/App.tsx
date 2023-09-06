@@ -1,11 +1,11 @@
 import "./App.css";
-import Search from "search/Search";
+import { Button } from "@mf-kahve/ui";
 
 function App() {
   return (
     <>
       <div>hello</div>
-      <Search />
+      <Button>Click me</Button>
     </>
   );
 }
