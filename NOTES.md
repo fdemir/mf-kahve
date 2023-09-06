@@ -1,1 +1,2 @@
 - vite build -- watch
+- add docs about how to integrate the ui pkg to the new env
