@@ -113,6 +113,12 @@ CI/CD is done with Github Actions. There are 2 workflows. The first workflow is 
 - Integrate the microfrontends with each other
 - Add testing
 
+## Known Issues
+
+### PNPM and Docker
+
+It is impossible to create reflinks or hardlinks between a Docker container and the host filesystem during build time. The next best thing you can do is using BuildKit cache mount to share cache between builds. Alternatively, may use podman because it can mount Btrfs volumes during build time.
+
 ## References
 
 - [Micro-frontends in context](https://increment.com/frontend/micro-frontends-in-context/)
