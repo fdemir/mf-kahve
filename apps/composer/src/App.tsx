@@ -6,8 +6,10 @@ function App() {
     <>
       <div className="bg-zinc-200 w-screen min-h-screen flex">
         <aside className="h-screen w-32 p-4">
-          <div className="h-full w-full bg-white rounded-md shadow-sm">
-            <Button>Hello</Button>
+          <div className="h-full w-full bg-white rounded-md shadow-sm flex flex-col items-center gap-6 py-4">
+            <span className="font-bold text-2xl">MF</span>
+            <Button>A</Button>
+            <Button>B</Button>
           </div>
         </aside>
         <main className="w-full flex">
