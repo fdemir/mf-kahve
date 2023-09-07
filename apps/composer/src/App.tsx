@@ -1,11 +1,34 @@
+import { Button } from "@mf-kahve/ui";
+import Search from "search/Search";
+
 function App() {
   return (
     <>
-      <div className="grid grid-cols-12 grid-rows-5 gap-4">
-        <div className="row-span-5">1</div>
-        <div className="col-span-8">4</div>
-        <div className="col-span-3 row-span-5 col-start-10">5</div>
-        <div className="col-span-8 row-span-4 col-start-2 row-start-2">7</div>
+      <div className="bg-zinc-200 w-screen min-h-screen flex">
+        <aside className="h-screen w-32 p-4">
+          <div className="h-full w-full bg-white rounded-md shadow-sm">
+            <Button>Hello</Button>
+          </div>
+        </aside>
+        <main className="w-full flex">
+          <div className="w-3/4 flex flex-col gap-4 p-4">
+            <section>
+              <Search />
+            </section>
+            <section>
+              <div className="h-14 w-full bg-white rounded-md shadow-sm p-4">
+                Listing
+              </div>
+            </section>
+          </div>
+          <div className="w-1/4">
+            <section className="p-4">
+              <div className="w-full bg-white rounded-md shadow-sm h-20 p-4">
+                Cart
+              </div>
+            </section>
+          </div>
+        </main>
       </div>
     </>
   );

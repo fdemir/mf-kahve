@@ -135,6 +135,7 @@ importers:
 
   apps/search:
     specifiers:
+      '@mf-kahve/ui': workspace:^0.0.0
       '@originjs/vite-plugin-federation': ^1.2.3
       '@types/react': ^18.2.15
       '@types/react-dom': ^18.2.7
@@ -149,6 +150,7 @@ importers:
       typescript: ^5.0.2
       vite: ^4.4.5
     dependencies:
+      '@mf-kahve/ui': link:../../packages/ui
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     devDependencies:
