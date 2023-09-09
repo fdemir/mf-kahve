@@ -1,4 +1,4 @@
-cache: deploy list app
+name: deploy list app
 
 on:
   - push
