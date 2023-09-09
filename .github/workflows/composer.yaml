@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "apps/composer/**"
+#    paths:
+#      - "apps/composer/**"
 
 jobs:
   deploy:
@@ -50,5 +50,5 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_DEPLOY_MESSAGE: "Deployed from GitHub Actions - Composer App"
           NETLIFY_DEPLOY_TO_PROD: true
-          build_command: "cd apps/composer && pnpm run build"
+          build_command: "pnpm run build:composer"
           build_directory: "apps/composer/dist"
