@@ -18,10 +18,10 @@ jobs:
           node-version: 16
 
       - uses: pnpm/action-setup@v2
-        name: Install pnpm
         with:
           version: 8
-          run_install: false
+          run_install: |
+            - recursive: true
 
       - name: Get pnpm store directory
         shell: bash
