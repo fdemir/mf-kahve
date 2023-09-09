@@ -1,0 +1,19 @@
+cache: deploy list app
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: deploy
+          key: ${{ runner.os }}-deploy-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-deploy-
+      - name: Deploy
+        run: |
+          cd deploy
+          echo "Deploying..."
+          echo "Deployed!"
+          echo ":///"
