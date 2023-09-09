@@ -12,17 +12,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
     
-    - name: Install Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 20.5.0
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.5.0
 
-    - uses: actions/cache@v2
+      - name: Cache
+        uses: actions/cache@v2
         with:
           path: deploy
           key: ${{ runner.os }}-deploy-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-deploy-
+          
       - name: Deploy
         run: |
           cd deploy
