@@ -1,8 +1,11 @@
-name: deploy list app
+name: MF-Kahve Composer App Deploy
 
 on:
-  - push
-  - pull_request
+  push:
+    branches:
+      - main
+    paths:
+      - "apps/composer/**"
 
 jobs:
   deploy:
@@ -36,8 +39,16 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Deploy
+      - name: Install dependencies
         run: |
-          echo "Deploying..."
-          echo "Deployed!"
-          echo ":///"
+          pnpm install --frozen-lockfile
+
+      - uses: jsmrcaga/action-netlify-deploy@v2.0.0
+        working-directory: apps/composer
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_DEPLOY_MESSAGE: "Deployed from GitHub Actions - Composer App"
+          NETLIFY_DEPLOY_TO_PROD: true
+          build_command: "pnpm run build"
+          build_directory: "dist"
