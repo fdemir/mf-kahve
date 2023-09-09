@@ -4,9 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:composer": "pnpm --filter @mf-kahve/composer build"
+    "build:composer": "pnpm --filter @mf-kahve/composer build",
+    "build-pkgs": "pnpm run --filter @mf-kahve/* build",
+    "changeset-publish": "changeset publish",
+    "changeset-tag": "changeset tag",
+    "ci:version": "pnpm changelog && pnpx changeset version && pnpm install --no-frozen-lockfile && git add .",
+    "ci:publish": "pnpm build-pkgs && git status && pnpm publish -r && pnpm changeset tag"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2"
+  }
 }
