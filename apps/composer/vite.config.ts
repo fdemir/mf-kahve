@@ -9,7 +9,8 @@ export default defineConfig({
     federation({
       name: "composer",
       remotes: {
-        search: "http://localhost:5001/assets/remoteEntry.js",
+        search: "http://localhost:3000/mf/search/assets/remoteEntry.js",
+        cart: "http://localhost:3000/mf/cart/assets/remoteEntry.js",
       },
       shared: ["react", "react-dom"],
     }),
