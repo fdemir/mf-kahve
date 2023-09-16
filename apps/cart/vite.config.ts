@@ -11,6 +11,7 @@ export default defineConfig({
       filename: "remoteEntry.js",
       exposes: {
         "./Cart": "./src/Cart",
+        "./store": "./src/store",
       },
       shared: ["react", "react-dom"],
     }),
