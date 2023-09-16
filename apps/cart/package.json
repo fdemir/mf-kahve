@@ -1,13 +1,14 @@
 {
-  "name": "cart",
+  "name": "@mf-kahve/cart",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 3003 --strictPort",
     "build": "tsc && vite build",
+    "build:watch": "tsc && vite build --watch",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview --port 3003 --strictPort"
   },
   "dependencies": {
     "react": "^18.2.0",

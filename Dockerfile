@@ -23,6 +23,7 @@ COPY --from=build /app/apps/composer/dist /usr/share/nginx/html
 
 COPY --from=build /app/apps/search/dist /usr/share/nginx/html/mf/search
 COPY --from=build /app/apps/cart/dist /usr/share/nginx/html/mf/cart
+COPY --from=build /app/apps/list/dist /usr/share/nginx/html/mf/list
 
 EXPOSE 3000
 CMD ["nginx", "-g", "daemon off;"]

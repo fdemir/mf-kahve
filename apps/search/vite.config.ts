@@ -12,7 +12,7 @@ export default defineConfig({
       exposes: {
         "./Search": "./src/Search",
       },
-      shared: ["react", "react-dom", "@mf-kahve/ui"],
+      shared: ["react", "react-dom"],
     }),
   ],
   build: {

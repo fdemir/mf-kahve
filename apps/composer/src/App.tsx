@@ -1,27 +1,26 @@
 import { Button } from "@mf-kahve/ui";
 import Search from "search/Search";
 import Cart from "cart/Cart";
+import List from "list/List";
 
 function App() {
   return (
     <>
-      <div className="flex w-screen min-h-screen bg-zinc-200">
-        <aside className="w-32 h-screen p-4">
-          <div className="flex flex-col items-center w-full h-full gap-6 py-4 bg-white rounded-md shadow-sm">
-            <span className="text-2xl font-bold">MF</span>
+      <div className="bg-zinc-200 w-screen min-h-screen flex">
+        <aside className="h-screen w-32 p-4">
+          <div className="h-full w-full bg-white rounded-md shadow-sm flex flex-col items-center gap-6 py-4">
+            <span className="font-bold text-2xl">MF</span>
             <Button>A</Button>
             <Button>B</Button>
           </div>
         </aside>
-        <main className="flex w-full">
-          <div className="flex flex-col w-3/4 gap-4 p-4">
+        <main className="w-full flex">
+          <div className="w-3/4 flex flex-col gap-4 p-4">
             <section>
               <Search />
             </section>
             <section>
-              <div className="w-full p-4 bg-white rounded-md shadow-sm h-14">
-                Listing
-              </div>
+              <List />
             </section>
           </div>
           <div className="w-1/4">

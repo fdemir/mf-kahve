@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build:composer": "pnpm --filter @mf-kahve/composer build",
-    "build-pkgs": "pnpm run --filter @mf-kahve/* build",
+    "build": "pnpm run --filter @mf-kahve/* build",
+    "build:watch": "pnpm run -r --filter @mf-kahve/* build:watch",
+    "preview:watch": "pnpm run -r --filter @mf-kahve/* preview",
+    "dev": "concurrently --kill-others \"pnpm run preview:watch\" \"pnpm run build:watch\"",
     "changeset-publish": "changeset publish",
     "changeset-tag": "changeset tag",
     "ci:version": "pnpm changelog && pnpx changeset version && pnpm install --no-frozen-lockfile && git add .",
@@ -15,6 +18,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@changesets/cli": "^2.26.2"
+    "@changesets/cli": "^2.26.2",
+    "concurrently": "^8.2.1"
   }
 }
