@@ -36,7 +36,7 @@ export default defineConfig({
   build: {
     modulePreload: false,
     target: "esnext",
-    minify: true,
+    minify: "esbuild",
     cssCodeSplit: false,
   },
 });
