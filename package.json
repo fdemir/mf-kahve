@@ -6,9 +6,9 @@
   "scripts": {
     "build:composer": "pnpm --filter @mf-kahve/composer build",
     "build": "pnpm run --filter @mf-kahve/* build",
-    "build:watch": "pnpm run -r --filter @mf-kahve/* build:watch",
-    "preview:watch": "pnpm run -r --filter @mf-kahve/* preview",
-    "dev": "concurrently --kill-others \"pnpm run preview:watch\" \"pnpm run build:watch\"",
+    "build:watch": "pnpm run --filter @mf-kahve/*-mf build:watch",
+    "preview:watch": "pnpm run --filter @mf-kahve/*-mf preview",
+    "dev": "concurrently --kill-others \"pnpm run preview:watch\" \"pnpm run build:watch\" \"pnpm run --filter \"composer\" dev\"",
     "changeset-publish": "changeset publish",
     "changeset-tag": "changeset tag",
     "ci:version": "pnpm changelog && pnpx changeset version && pnpm install --no-frozen-lockfile && git add .",

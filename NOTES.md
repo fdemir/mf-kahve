@@ -1,5 +1,6 @@
 ## Todo
 
+- [ ] Explain -mf suffix
 - [ ] Add script descriptions
 - [ ] Add only .gitignore to the root dir
 - [ ] Use CDN provider to make independent deployments

@@ -1,7 +1,8 @@
+import { Button, Input } from "@mf-kahve/ui";
 export default function Search() {
   return (
     <div className="w-full bg-white rounded-md shadow-sm p-4 flex justify-center items-center">
-      {/* <Button size="icon">
+      <Button size="icon">
         <svg
           stroke="currentColor"
           fill="currentColor"
@@ -17,7 +18,7 @@ export default function Search() {
       <Input
         placeholder="Drink something?"
         className="border-0 shadow-none focus-visible:ring-0"
-      /> */}
+      />
     </div>
   );
 }

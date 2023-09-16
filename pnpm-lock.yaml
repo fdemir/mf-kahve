@@ -58,46 +58,6 @@ importers:
         specifier: ^4.4.5
         version: 4.4.9(@types/node@20.5.9)
 
-  apps/checkout:
-    dependencies:
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
-    devDependencies:
-      '@types/react':
-        specifier: ^18.2.15
-        version: 18.2.21
-      '@types/react-dom':
-        specifier: ^18.2.7
-        version: 18.2.7
-      '@typescript-eslint/eslint-plugin':
-        specifier: ^6.0.0
-        version: 6.6.0(@typescript-eslint/parser@6.6.0)(eslint@8.48.0)(typescript@5.2.2)
-      '@typescript-eslint/parser':
-        specifier: ^6.0.0
-        version: 6.6.0(eslint@8.48.0)(typescript@5.2.2)
-      '@vitejs/plugin-react':
-        specifier: ^4.0.3
-        version: 4.0.4(vite@4.4.9)
-      eslint:
-        specifier: ^8.45.0
-        version: 8.48.0
-      eslint-plugin-react-hooks:
-        specifier: ^4.6.0
-        version: 4.6.0(eslint@8.48.0)
-      eslint-plugin-react-refresh:
-        specifier: ^0.4.3
-        version: 0.4.3(eslint@8.48.0)
-      typescript:
-        specifier: ^5.0.2
-        version: 5.2.2
-      vite:
-        specifier: ^4.4.5
-        version: 4.4.9(@types/node@20.5.9)
-
   apps/composer:
     dependencies:
       '@mf-kahve/ui':
@@ -198,9 +158,6 @@ importers:
 
   apps/search:
     dependencies:
-      '@mf-kahve/ui':
-        specifier: workspace:^0.0.0
-        version: link:../../packages/ui
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -208,6 +165,9 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
     devDependencies:
+      '@mf-kahve/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       '@originjs/vite-plugin-federation':
         specifier: ^1.2.3
         version: 1.2.3
