@@ -1,6 +1,6 @@
 # MF-Kahve
 
-MF Kahve is a practical example of microfrontends architecture by using horizontal splitting. It is a simple coffee shop application that consists of multiple microfrontends and a host application.
+MF Kahve is a practical example of microfrontends architecture by using vertical splitting and client-side composition. It is a simple coffee shop application that consists of multiple microfrontends and a host application.
 
 ## Table of Contents
 
@@ -61,19 +61,19 @@ Since we are making an practical microfrontend example we doesn't care about the
 
 #### Sharing data between microfrontends
 
-(not implemented yet)
+Every microfrontend is responsible for its own data. Although, there must be some package that all teams agree on. This package is `zustand`. It is a simple state management library. It is used to share data between the microfrontends. The teams can expose the hook/state that they want to share with other teams.
 
 #### Communication between microfrontends
 
-(not implemented yet)
+The `@mf-kahve/core` package provides the event bus for the microfrontends. The event bus is a simple pub/sub implementation. It is used to communicate between the microfrontends.
 
 #### Routing
 
-Routing will be handled by **Composer** team. The composer team will be responsible for the composition of the microfrontends and the routing between them.
+Routing will be handled by **Composer** team. The composer team will be responsible for the composition of the microfrontends and the routing between them. The main technology behind the routing is `react-router`.
 
 #### Styling
 
-Design system will be handled by **Composer** team. The composer team will be responsible for the design system and the styling of the microfrontends. Teams can use the design system to style their microfrontends.
+Design system will be handled by **Composer** team. The composer team will be responsible for the design system and the styling of the microfrontends. Teams can use the design system to style their microfrontends. The main technology behind the styling is "tailwindcss".
 
 #### Testing
 
@@ -83,26 +83,17 @@ Microfrontend testing is done in isolation. Each microfrontend is tested separat
 
 (not implemented yet)
 
-#### Deployement
-
-(not implemented yet)
-
-### Roadmap
-
-- Add testing
-- Add and integrate with observability libs and tools
-
 ## Starting the application
 
 ```bash
 docker-compose up
 ```
 
-Check the application at `http://localhost:8080`
+Check the application at `http://localhost:3000`
 
 ## Deployement
 
-Deployement is done with Docker and Kubernetes. Each microfrontend is deployed as a separate docker image. The host application is also deployed as a separate docker image. The docker images are pushed to a docker registry. The kubernetes cluster is configured to pull the images from the docker registry and deploy them.
+(not ready yet)
 
 ## CI/CD
 
@@ -112,16 +103,21 @@ CI/CD is done with Github Actions. There are 2 workflows. The first workflow is 
 
 - Integrate the microfrontends with each other
 - Add testing
+- Add policy to prevent duplicate packages, etc.
 
 ## Known Issues
 
 ### PNPM and Docker
 
-It is impossible to create reflinks or hardlinks between a Docker container and the host filesystem during build time. The next best thing you can do is using BuildKit cache mount to share cache between builds. Alternatively, may use podman because it can mount Btrfs volumes during build time.
+It is impossible to create reflinks or hardlinks between a Docker container and the host filesystem during build time. The next best thing we can do is using BuildKit cache mount to share cache between builds. Alternatively, may use podman because it can mount Btrfs volumes during build time.
 
 ## References
 
-- [Micro-frontends in context](https://increment.com/frontend/micro-frontends-in-context/)
+- [Micro-frontends in context by Luca Mezzalira](https://increment.com/frontend/micro-frontends-in-context/)
+- [Building Micro-Frontends by Luca Mezzalira](https://www.oreilly.com/library/view/building-micro-frontends/9781492082989/)
+- [Micro Frontends by Cam Jackson](https://martinfowler.com/articles/micro-frontends.html)
+- [Micro Frontends by Michael Geers](https://micro-frontends.org/)
+- [Micro Frontends in Action by Michael Geers](https://www.manning.com/books/micro-frontends-in-action)
 
 ## License
 
