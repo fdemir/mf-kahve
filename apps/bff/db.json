@@ -1,0 +1,96 @@
+{
+  "products": [
+    {
+      "name": "Cappuccino",
+      "price": 3.5
+    },
+    {
+      "name": "Latte",
+      "price": 3.5
+    },
+    {
+      "name": "Flat White",
+      "price": 3.5
+    },
+    {
+      "name": "Long Black",
+      "price": 3.5
+    },
+    {
+      "name": "Mocha",
+      "price": 3.5
+    },
+    {
+      "name": "Hot Chocolate",
+      "price": 3.5
+    },
+    {
+      "name": "Chai Latte",
+      "price": 3.5
+    },
+    {
+      "name": "Babycino",
+      "price": 1.5
+    },
+    {
+      "name": "Espresso",
+      "price": 3.5
+    },
+    {
+      "name": "Macchiato",
+      "price": 3.5
+    },
+    {
+      "name": "Affogato",
+      "price": 3.5
+    },
+    {
+      "name": "Piccolo",
+      "price": 3.5
+    },
+    {
+      "name": "Ristretto",
+      "price": 3.5
+    },
+    {
+      "name": "Iced Coffee",
+      "price": 3.5
+    },
+    {
+      "name": "Iced Chocolate",
+      "price": 3.5
+    },
+    {
+      "name": "Iced Mocha",
+      "price": 3.5
+    },
+    {
+      "name": "Iced Latte",
+      "price": 3.5
+    },
+    {
+      "name": "Iced Long Black",
+      "price": 3.5
+    },
+    {
+      "name": "Iced Tea",
+      "price": 3.5
+    },
+    {
+      "name": "Iced Chai Latte",
+      "price": 3.5
+    },
+    {
+      "name": "Iced Matcha Latte",
+      "price": 3.5
+    },
+    {
+      "name": "Iced Mocha",
+      "price": 3.5
+    },
+    {
+      "name": "Turkish Coffee",
+      "price": 3.5
+    }
+  ]
+}

@@ -13,7 +13,7 @@ export default defineConfig({
         "./Cart": "./src/Cart",
         "./store": "./src/store",
       },
-      shared: ["react", "react-dom"],
+      shared: ["react", "react-dom", "react-icons"],
     }),
   ],
   build: {

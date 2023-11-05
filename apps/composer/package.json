@@ -10,9 +10,12 @@
     "preview": "vite preview --port 3000 --strictPort"
   },
   "dependencies": {
+    "@mf-kahve/core": "workspace:^0.0.0",
     "@mf-kahve/ui": "workspace:^0.0.0",
+    "@tanstack/react-query": "^5.7.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0"
   },
   "devDependencies": {
     "@originjs/vite-plugin-federation": "^1.2.3",

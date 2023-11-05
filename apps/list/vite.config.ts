@@ -12,7 +12,10 @@ export default defineConfig({
       exposes: {
         "./List": "./src/List",
       },
-      shared: ["react", "react-dom"],
+      shared: ["react", "react-dom", "@tanstack/react-query", "react-icons"],
+      remotes: {
+        cart: `http://localhost:3003/assets/remoteEntry.js`,
+      },
     }),
   ],
   build: {

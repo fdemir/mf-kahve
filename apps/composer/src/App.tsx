@@ -1,21 +1,26 @@
-import { Button } from "@mf-kahve/ui";
+import { Button, Card } from "@mf-kahve/ui";
 import Search from "search/Search";
 import Cart from "cart/Cart";
 import List from "list/List";
+import { AiOutlineHome, AiOutlineSetting } from "react-icons/ai";
 
 function App() {
   return (
     <>
-      <div className="bg-zinc-200 w-screen min-h-screen flex">
-        <aside className="h-screen w-32 p-4">
-          <div className="h-full w-full bg-white rounded-md shadow-sm flex flex-col items-center gap-6 py-4">
-            <span className="font-bold text-2xl">MF</span>
-            <Button>A</Button>
-            <Button>B</Button>
-          </div>
+      <div className="flex w-screen min-h-screen bg-zinc-200">
+        <aside className="w-32 h-screen p-4">
+          <Card className="flex flex-col items-center w-full h-full gap-6 py-4 bg-white rounded-md shadow-sm">
+            <span className="text-2xl font-bold">MF</span>
+            <Button>
+              <AiOutlineHome />
+            </Button>
+            <Button>
+              <AiOutlineSetting />
+            </Button>
+          </Card>
         </aside>
-        <main className="w-full flex">
-          <div className="w-3/4 flex flex-col gap-4 p-4">
+        <main className="flex w-full">
+          <div className="flex flex-col w-3/4 gap-4 p-4">
             <section>
               <Search />
             </section>

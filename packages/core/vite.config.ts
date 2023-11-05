@@ -1,19 +1,18 @@
+// vite.config.ts
+import { resolve } from "path";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    dts({
-      insertTypesEntry: true,
-    }),
-  ],
   build: {
     lib: {
-      entry: "src/index.ts",
+      entry: resolve(__dirname, "src/index.ts"),
+      name: "index",
       formats: ["es"],
-      fileName: (format) => `core.${format}.js`,
-      name: "@mf-kahve/core",
+    },
+    rollupOptions: {
+      external: ["@tanstack/react-query", "react"],
     },
   },
+  plugins: [dts({})],
 });

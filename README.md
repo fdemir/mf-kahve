@@ -18,6 +18,7 @@ MF Kahve is a practical example of microfrontends architecture by using vertical
       - [Observability](#observability)
       - [Deployement](#deployement)
     - [Roadmap](#roadmap)
+  - [Policy](#policy)
   - [Starting the application](#starting-the-application)
   - [Deployement](#deployement-1)
   - [CI/CD](#cicd)
@@ -118,6 +119,7 @@ It is impossible to create reflinks or hardlinks between a Docker container and 
 - [Micro Frontends by Cam Jackson](https://martinfowler.com/articles/micro-frontends.html)
 - [Micro Frontends by Michael Geers](https://micro-frontends.org/)
 - [Micro Frontends in Action by Michael Geers](https://www.manning.com/books/micro-frontends-in-action)
+- [Pattern: Client-side UI composition](https://microservices.io/patterns/ui/client-side-ui-composition.html)
 
 ## License
 

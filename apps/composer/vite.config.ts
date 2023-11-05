@@ -10,7 +10,7 @@ const ports = {
   cart: 3003,
 };
 
-const buildRemotes = (mfList: string[], dev: boolean) => {
+export const buildRemotes = (mfList: string[], dev: boolean) => {
   const remotes = {};
   mfList.forEach((mf) => {
     if (dev) {
@@ -30,7 +30,7 @@ export default defineConfig({
     federation({
       name: "composer",
       remotes: buildRemotes(["list", "search", "cart"], isDev),
-      shared: ["react", "react-dom"],
+      shared: ["react", "react-dom", "react-icons"],
     }),
   ],
   build: {
