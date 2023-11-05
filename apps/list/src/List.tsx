@@ -16,6 +16,7 @@ function List() {
       }).then((res) => res.json()),
   });
 
+  // https://github.com/originjs/vite-plugin-federation/issues/294
   const addItem = useCartStore((state) => state.addItem);
 
   if (isLoading) return <div>Loading...</div>;
